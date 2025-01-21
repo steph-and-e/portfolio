@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+
+:root {
+    --background-black: #0f1318;
+}
+
+body {
+    font-family: "Space Grotesk", serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: white;
+    background-color: var(--background-black);
+}
+
+h1 {
+    font-size: 64px;
+    font-family: "Bricolage Grotesque", serif;
+    font-weight: 300;
+    letter-spacing:0.04ch;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    font-family: "Bricolage Grotesque", serif;
+    font-weight: 300;
+    letter-spacing:0.04ch;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--background-black);
+    text-align: center;
+    padding: 50px;
+}
+
+.Script {
+    font-family: "Luxurious Script";
+    font-weight: 100;
+    font-size: 100px;
+    line-height: 0;
+}
+
+
+/* navbar styling */
+
+#navbar {
+    position: fixed;
+    top: 60px;
+    left: 50%;                     /* align left edge to the center */ 
+    transform: translateX(-50%);   /* offset by half the element's width */
+    padding: 15px 25px;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    column-gap: 50px;
+    z-index: 10;
+    /* glass blur effect from https://css.glass by @miketromba*/
+    background: #4c4c4c44;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.navlink {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    /* padding: 10px; */
+}
+
+/*  */
+
+.section {
+    background-color: var(--background-black);
+    min-height: 20vh;
+    height: 100%;
+}
+
+/*  */
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/background-gradient.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* box-shadow: 0 0 100px 50px #14161f inset; */
+    /* mask-image: linear-gradient(to bottom, #14161f, transparent, black 90%); */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: -webkit-gradient(linear, left 75%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+
+}
+
+.hero-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-heading {
+    margin-top: 220px;
+}
+
+.hero-text {
+    max-width: 800px;
+}
+
+#asterisk{
+    color:white;
+    font-family: "Bricolage Grotesque", serif;
+    font-size: 220px;
+    font-weight: 400;
+    margin-top: 50px;
+    text-align: center;
+    z-index:10;
+}
+
+/* journal styling */
+
+.reflection a {
+    color: white;
+    color: rgb(156, 153, 153);
+    /* text-decoration: none; */
+    font-style: italic;
+    font-weight: 400;
+}
+
+.reflection {
+    letter-spacing: -.3px;
+    line-height: 1.75em;
+    /* color: rgb(206, 206, 206); */
+}
