@@ -30,6 +30,7 @@ h2 {
     font-weight: 300;
     letter-spacing:0.04ch;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 footer {
@@ -45,6 +46,35 @@ footer {
     line-height: 0;
 }
 
+/* tile styling */
+
+.tile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: blue; */
+}
+
+.tile {
+    width: 32%;
+    min-height: 100px;
+    background-color: rgb(47, 47, 49);
+    padding: 12px;
+    border: 1px rgba(255, 255, 255, 0.192) solid;
+    border-radius: 8px;
+    /* margin: 10px; */
+}
+
+.project-image {
+    width: 100%;
+    border-radius:6px;
+}
+
+.project-description {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.679);
+    margin-bottom: 10px;
+}
 
 /* navbar styling */
 
@@ -73,15 +103,22 @@ footer {
     /* padding: 10px; */
 }
 
-/*  */
+/* section and container styling */
 
 .section {
     background-color: var(--background-black);
     min-height: 20vh;
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-/*  */
+.container {
+    width: 90vw;
+    /* border: white 1px solid; */
+}
+
+/* hero styling */
 
 .hero-section {
     height: 100vh;
@@ -90,8 +127,6 @@ footer {
     background-image: url('../images/background-gradient.png');
     background-repeat: no-repeat;
     background-size: cover;
-    /* box-shadow: 0 0 100px 50px #14161f inset; */
-    /* mask-image: linear-gradient(to bottom, #14161f, transparent, black 90%); */
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-image: -webkit-gradient(linear, left 75%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
 
@@ -121,6 +156,15 @@ footer {
     z-index:10;
 }
 
+/*  */
+.home-blurb-container {
+    display: flex;
+}
+
+.home-blurb-description {
+    line-height: 1.75em;
+}
+
 /* journal styling */
 
 .reflection a {
@@ -133,6 +177,5 @@ footer {
 
 .reflection {
     letter-spacing: -.3px;
-    line-height: 1.75em;
     /* color: rgb(206, 206, 206); */
 }
