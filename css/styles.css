@@ -6,17 +6,20 @@
 
 :root {
     --background-black: #0f1318;
+    --light-grey: rgb(230, 230, 230);
+    --dark-grey: rgb(121, 121, 121);
 }
 
 body {
     font-family: "Space Grotesk", serif;
     font-weight: 100;
     font-size: 20px;
-    color: white;
+    color: var(--light-grey);
     background-color: var(--background-black);
 }
 
 h1 {
+    color: white;
     font-size: 64px;
     font-family: "Bricolage Grotesque", serif;
     font-weight: 300;
@@ -25,16 +28,21 @@ h1 {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 32px;
     font-family: "Bricolage Grotesque", serif;
     font-weight: 300;
     letter-spacing:0.04ch;
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 10px;
 }
 
+/* .grey {
+    color: rgba(255, 255, 255, 0.454);
+    font-weight: 200;
+} */
+
 a {
-    color:rgb(125, 125, 125);
+    color: var(--dark-grey);
     font-style: italic;
     /* text-decoration: none; */
     font-weight: 400;
@@ -64,11 +72,11 @@ footer {
 }
 
 .tile {
-    width: 32%;
+    width: 32.8%;
     min-height: 100px;
-    background-color: rgb(47, 47, 49);
+    background-color: rgb(31, 31, 33);
     padding: 12px;
-    border: 1px rgba(255, 255, 255, 0.192) solid;
+    border: 1px rgba(255, 255, 255, 0.102) solid;
     border-radius: 8px;
     /* margin: 10px; */
 }
@@ -76,11 +84,12 @@ footer {
 .project-image {
     width: 100%;
     border-radius:6px;
+    border: 1px rgba(255, 255, 255, 0.4) solid;
 }
 
 .project-description {
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.679);
+    color: rgb(147, 147, 147);
     margin-bottom: 10px;
 }
 
@@ -106,8 +115,10 @@ footer {
 
 .navlink {
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    font-weight: 200;
+    color: rgb(205, 205, 205);
     text-decoration: none;
+    font-style: normal;
     /* padding: 10px; */
 }
 
@@ -180,8 +191,8 @@ footer {
 /* journal styling */
 
 .reflection a {
-    color: white;
-    color: rgb(156, 153, 153);
+    /* color: white; */
+    /* color: rgb(156, 153, 153); */
     /* text-decoration: none; */
     font-style: italic;
     font-weight: 400;
