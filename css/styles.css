@@ -116,7 +116,7 @@ footer {
 .navlink {
     font-size: 20px;
     font-weight: 200;
-    color: rgb(205, 205, 205);
+    color: var(--light-grey);
     text-decoration: none;
     font-style: normal;
     /* padding: 10px; */
