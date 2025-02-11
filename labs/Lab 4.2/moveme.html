@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+To be used in exercises. 
+
+NOTE ON ABSOLUTE POSITIONING: When an element has position:absolute, you can place 
+anywhere on the page you want. You can specify a pixel position of the top, left
+corner using the top and left CSS properties. If the element is a child of
+<body> this will position it relative to the top left corner of the page.
+
+If an element with absolute position is inside another element with absolute
+position (as the "moveme" div is below) you specify top and left to move it 
+relative to the top left corner of the containing element. So for this element,
+top: 0px and left: 0px puts it in the top left corner of the "container" div.
+
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+     
+
+            function moveRandom() {
+                if (confirm("Do you want to move circle?")){
+                let randomTop = Math.floor(Math.random() *400); 
+                let randomLeft = Math.floor(Math.random() *400);
+                let ball = document.getElementById("moveme");         
+                ball.style.top =randomTop+"px";
+                ball.style.left = randomLeft+"px"; }  
+            }
+            window.addEventListener("load",function(event){
+                let ball = document.getElementById("moveme");
+                ball.style.top = "0px";
+                ball.style.left = "0px";
+            })
+            function moveBall() {
+                let ball = document.getElementById("moveme");         
+                let direction = prompt("What direction do you want to move the ball? (u, d, l, r). Press q to quit.");
+                let currentTop = ball.style.top || 0;
+                let currentLeft = ball.style.left || 0;
+                currentTop = parseInt(currentTop.slice(0, -2));
+                currentLeft = parseInt(currentLeft.slice(0,-2));
+                if (direction==="u"){
+                    let top = currentTop - 20;
+                    if (top >= 0) {
+                        ball.style.top = top + "px";
+                    }
+                    else {
+                        console.log('cant move');
+                        alert("cant move");
+                    }
+                    console.log(top);
+                }
+                else if (direction==="d"){
+                    let down = currentTop + 20;
+                    if (down <= 400) {
+                        ball.style.top = down + "px";
+                    }
+                    else {
+                        console.log('cant move');
+                        alert("cant move");
+                    }
+                    console.log(top);
+                }
+                else if (direction==="l"){
+                    let left = currentLeft - 20;
+                    if (left >= 0) {
+                        ball.style.left = left + "px";
+                    }
+                    else {
+                        console.log('cant move');
+                        alert("cant move");
+                    }
+                    console.log(left);
+                }
+                else if (direction==="r"){
+                    let right = currentLeft + 20;
+                    if (right <= 400) {
+                        ball.style.left = right + "px";
+                    }
+                    else {
+                        console.log('cant move');
+                        alert("cant move");
+                    }
+                    console.log(left);
+                }
+            }
+        </script>
+        <style>
+            #container {
+                position:absolute;
+                top:50px;
+                left:50px;
+                width:500px;
+                height:500px;
+                border: 10px solid black;
+                border-radius: 70px;
+            }
+            #moveme {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100px;
+                height: 100px;
+                background-color: green;
+                border-radius:100px;
+                border:10px solid black;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="container">
+            <div id='moveme'></div>
+        </div>
+    </body>
+</html>

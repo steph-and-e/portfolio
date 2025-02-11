@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+1. Write a script on a web page that presents the user with an arithmetic problem (for example what is 23 + -4?) and asks for the answer using a prompt. Then give them feedback using an alert box.
+2. Extend the script so that it generates the integers for the arithmetic problem randomly using Math.floor(Math.random() * 201) – 100. Keep presenting the question until they get it right. Then give them a success message in an alert box. For an explanation of random number generation see JS Random on W3Schools.
+3. Extend the script so that it asks the user if they would like another question using a confirm dialog and gives them another question if they press “OK”. If they press “Cancel”, the page should finish loading and display a goodbye message.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4.1 - Chapter 17 Exercises</title>
+    <script>
+      // repeat until user no longer wants to answer questions
+      let continueProgram = true;
+      do {
+        // generate random integers for the problem
+        let num1 = Math.floor(Math.random() * 201) - 100;
+        let num2 = Math.floor(Math.random() * 201) - 100;
+        let solution = num1 + num2;
+        // prompt user to add the numbers together
+        let answer = parseInt(prompt("What is " + num1 + "+" + num2 + "?"));
+        // tell user if they are correct
+        if (answer === solution) alert("Correct!");
+        else
+          alert(
+            "That's not quite right! The correct answer is " + solution + "."
+          );
+        // ask user if they would like another question
+        continueProgram = confirm(
+          "Do you want another question? (Click OK to continue)"
+        );
+      } while (continueProgram);
+    </script>
+  </head>
+  <body>
+    <h1>Goodbye!</h1>
+  </body>
+</html>

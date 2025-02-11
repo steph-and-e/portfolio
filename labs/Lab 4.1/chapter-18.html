@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- 
+Create a page with a script that defines a lottery ball object.
+A lottery ball has a field defining its color (randomly set to “red” or “white”)
+and the number of points it’s worth (random number between 0 and 100).
+When the ball is created, use an alert box to tell the user the color
+and value of the ball object that was created.
+It should be different each time you load the page.
+-->
+<!--
+Modify the script from the last question so that
+it creates an array of 100 ball objects with random contents.
+Talk to the user with dialog boxes and allow them to draw balls
+by entering integers from 0 to 99 (corresponding to an array index),
+until either they draw a red ball or decide to quit.
+Show them each ball in an alert box.
+If they draw a red ball, deduct the number of points that ball is worthfrom their score and end the game.
+If they draw a white ball, add the number of points to their score and allow them to continue.
+If they try to draw a ball they drew already, or an invalid ball (less than 0, larger than 99)
+let them try again. When they quit or draw a red ball, show them their total score in an alert box.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4.1 - Chapter 17 Exercises</title>
+    <script>
+      // initialise vars
+      let score = 0;
+      let continueGame = true;
+      let chosenBall;
+      // create 100 ball objects
+      let lotteryBalls = [];
+      for (let i = 0; i < 100; i++) {
+        // random color
+        let tempRandomNum = Math.floor(Math.random() * 2);
+        let randomColor;
+        if (tempRandomNum === 0) {
+          randomColor = "white";
+        } else {
+          randomColor = "red";
+        }
+        // random points
+        let randomPoints = Math.floor(Math.random() * 100) + 1;
+        // create lottery ball object
+        let lotteryBall = { color: randomColor, points: randomPoints };
+        // push object to array
+        lotteryBalls.push(lotteryBall);
+      }
+      console.log(lotteryBalls);
+      // ask user to draw a ball until they want to stop
+      while (continueGame) {
+        // prompt user for input
+        do {
+          choice = parseInt(prompt("Choose a ball from 0-99:"));
+          if (isNaN(choice) || choice < 0 || choice > 99) {
+            alert("Invalid input! Enter a number between 0 and 99.");
+            continue;
+          }
+          if (lotteryBalls[choice] === "used") {
+            alert("You already chose that ball! Pick another.");
+          }
+        } while (
+          isNaN(choice) ||
+          choice < 0 ||
+          choice > 99 ||
+          lotteryBalls[choice] === "used"
+        );
+        // set chosen ball to ball objcet
+        chosenBall = lotteryBalls[choice];
+        // mark chosen ball as used
+        lotteryBalls[choice] = "used";
+        // display chosen ball
+        alert(
+          "You chose Ball " +
+            choice +
+            ": " +
+            chosenBall["color"] +
+            ", " +
+            chosenBall["points"] +
+            " points"
+        );
+        // update score depending on ball color
+        if (chosenBall["color"] === "red") {
+          score -= chosenBall["points"];
+          alert("GAME OVER (RED BALL)! Your final score is: " + score);
+          continueGame = false;
+        } else {
+          score += chosenBall["points"];
+          continueGame = confirm(
+            "Your new score is: " + score + ". Do you want to continue?"
+          );
+        }
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>

@@ -8,38 +8,94 @@
     <style>
       /* import fonts */
       @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Luxurious+Script&family=Space+Grotesk:wght@300..700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Cormorant:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Instrument+Serif:ital@0;1&family=Libre+Caslon+Display&family=Shippori+Mincho&display=swap");
     </style>
   </head>
   <body>
-    <div id="navbar">
-      <a class="navlink" href="index.html">Home</a>
-      <a class="navlink" href="about.html">About</a>
-      <a class="navlink" href="work.html">Work</a>
-      <a class="navlink" href="files/Stephanie Li - Resume.pdf" target="blank"
-        >Resume</a
-      >
-      <a class="navlink" href="journal.html">Journal</a>
-      <a
-        class="navlink"
-        href="https://cs1xd3.cas.mcmaster.ca/~li3424/team/"
-        target="blank"
-        >Team</a
-      >
-    </div>
-    <div class="hero-section section">
-      <div class="hero-text-container">
-        <div class="hero-text">
-          <h1 class="hero-heading">About Me</h1>
-          <p id="asterisk">*</p>
+    <header>
+      <div id="navbar">
+        <a id="home" class="navlink" href="index.html">Home</a>
+        <a id="about" class="navlink" href="about.html">About</a>
+        <a id="work" class="navlink" href="work.html">Work</a>
+        <a
+          id="resume"
+          class="navlink"
+          href="files/Stephanie Li - Resume.pdf"
+          target="blank"
+          >Resume</a
+        >
+        <a id="journal" class="navlink" href="journal.html">Journal</a>
+        <a id="menu" class="navlink" href="">Menu</a>
+      </div>
+      <div class="subpage-hero hero-section section">
+        <div class="hero-text-container">
+          <div class="hero-text">
+            <h1 class="hero-heading">
+              The <span class="Script">Face</span> behind the code
+            </h1>
+            <!-- <p id="asterisk">*</p> -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="section">
+      <div class="container">
+        <div class="section-title less-margin">
+          <h2>
+            <span class="header-italic">Hey there</span> 👋 I'm Stephanie Li!
+          </h2>
+        </div>
+        <div id="intro-container">
+          <div id="intro-text">
+            <h6>
+              A student originally from North Scarborough, now studying Computer
+              Science at McMaster University.
+            </h6>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <p>
+              Fun fact: this picture’s from my last year of high school when my
+              robotics team Bearbella represented Team Canada in Greece! I bet
+              you can’t see the soy sauce stain on my uniform...
+            </p>
+            <!-- <div id="signature-and-butto">
+              <img src="images/signature.png" />
+              <div class="button">Interested? Let's talk!</div>
+            </div> -->
+          </div>
+          <img id="stephanie" src="images/stephanie.jpg" />
         </div>
       </div>
     </div>
-    <div class="section"></div>
-    <div class="section"></div>
-    <div class="section"></div>
-    <div class="section"></div>
     <footer>
-      <p>Made with 💜 by Stephanie Li</p>
+      <hr />
+      <div class="section">
+        <div class="container">
+          <h6>Made with 💜 by Stephanie Li</h6>
+          <div id="contact-links">
+            <a href=""><img src="images/mail.png" /></a>
+            <a href=""><img src="images/linkedin.png" /></a>
+            <a href=""><img src="images/github.png" /></a>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+Finish this program by filling in JavaScript that checks if the user’s answer to 
+the addition question is correct, and then display “Correct” or “Incorrect” on the 
+web page by changing the innerHTML of the <h1> element.
+
+Sam Scott, McMaster University, 2025
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>addition</title>
+    <script type="text/javascript">
+      // call add function on load
+      window.addEventListener("load", add);
+
+      // add function
+      function add() {
+        // pick two random nums
+        var op1 = Math.floor(Math.random() * 200 - 100);
+        var op2 = Math.floor(Math.random() * 200 - 100);
+        // prompt user to add the nums
+        let answer = parseInt(prompt("What is " + op1 + " + " + op2 + "?"));
+        // ERROR VALIDATION
+        if (isNaN(answer) || answer === null) {
+          document.getElementById("result").classList.add("error");
+        } else {
+          document.getElementById("result").classList.remove("error");
+          // calc correct answer
+          correctAnswer = op1 + op2;
+          // check correctness
+          let correctness;
+          // if the answer is correect, change h1 to green
+          if (answer === correctAnswer) {
+            correctnessMessage = "Correct!";
+            document.getElementById("result").style.color = "green";
+          }
+          // if answer is incorreect, change h1 to red
+          else {
+            correctnessMessage =
+              "Incorrect! The correct answer is " + correctAnswer;
+            document.getElementById("result").style.color = "red";
+          }
+          // chgang h1 content
+          document.getElementById("result").innerHTML = correctnessMessage;
+        }
+      }
+    </script>
+    <style>
+      .error {
+        background-color: red;
+        border: black solid 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>Run addition() from the console to get going.</p>
+    <h1 style="color: red" id="result"></h1>
+  </body>
+</html>
