@@ -394,7 +394,7 @@ a.tile {
 }
 
 #intro-text img { /*signature*/
-    margin-top: 8vw;
+    margin-top: 10vw;
     width: 300px;
 }
 
@@ -493,7 +493,7 @@ a.tile {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     h1 {
         /* color: green; */
         font-size: 7vw;
@@ -528,7 +528,7 @@ a.tile {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     h1 {
         color: white;
         font-size: 10vw;
